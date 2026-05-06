@@ -1,0 +1,29 @@
+{
+  "repo": "notion-plat-mesh-pipe",
+  "language": "Java",
+  "category": "Platform engineering",
+  "case_count": 5,
+  "score_formula": "signal * 2 + slack + confidence - drag * 3",
+  "lane_thresholds": {
+    "ship": 140,
+    "watch": 105
+  },
+  "read_order": [
+    "README.md",
+    "fixtures/domain_review.csv",
+    "metadata/domain-review.json",
+    "examples/notion-plat-mesh-walkthrough.md"
+  ],
+  "first_question": "Does rollout width still dominate the review result?",
+  "second_question": "Is route drift being penalized hard enough before secret scope is trusted?",
+  "highest_case": {
+    "name": "recovery",
+    "focus": "secret scope",
+    "score": 214
+  },
+  "lowest_case": {
+    "name": "edge",
+    "focus": "route drift",
+    "score": 135
+  }
+}

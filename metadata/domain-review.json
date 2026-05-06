@@ -1,0 +1,73 @@
+{
+  "repo": "notion-plat-mesh-pipe",
+  "language": "Java",
+  "category": "Platform engineering",
+  "goal": "Package a Java local lab for mesh analysis with append-only fixtures, checkpoint recovery checks, and documented operating limits.",
+  "review_model": {
+    "terms": [
+      "rollout width",
+      "quota pressure",
+      "route drift",
+      "secret scope"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "rollout width",
+      "signal": 56,
+      "slack": 31,
+      "drag": 14,
+      "confidence": 84,
+      "score": 185,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "quota pressure",
+      "signal": 75,
+      "slack": 44,
+      "drag": 12,
+      "confidence": 54,
+      "score": 212,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "route drift",
+      "signal": 55,
+      "slack": 32,
+      "drag": 22,
+      "confidence": 59,
+      "score": 135,
+      "lane": "watch"
+    },
+    {
+      "name": "recovery",
+      "focus": "secret scope",
+      "signal": 75,
+      "slack": 40,
+      "drag": 8,
+      "confidence": 48,
+      "score": 214,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "rollout width",
+      "signal": 80,
+      "slack": 32,
+      "drag": 16,
+      "confidence": 45,
+      "score": 189,
+      "lane": "ship"
+    }
+  ]
+}
